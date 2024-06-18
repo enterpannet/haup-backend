@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+    postgres:
+        image: postgres
+        environment:
+            - POSTGRES_USER=user2024Use
+            - POSTGRES_PASSWORD=p@ssw0rd2024         
+            - POSTGRES_DB=car
+        volumes:
+            - volume:/var/lib/postgresql/data
+        ports:
+            - 5432:5432
+volumes:
+    volume:
+        driver: local
+        driver_opts:
+            type: none
+            o: bind
+            device: ./data
