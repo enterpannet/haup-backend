@@ -5,7 +5,11 @@ To install dependencies:
 ```bash
 bun install
 ```
+To DB:
 
+```bash
+docker compose up -d
+```
 To run:
 
 ```bash
